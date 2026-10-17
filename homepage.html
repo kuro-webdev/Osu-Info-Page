@@ -10,27 +10,41 @@
 	<style> 
 
 
-		/* This only activates on mobile screens (768px wide or smaller) */
+	
 @media (max-width: 768px) {
   
-  /* 1. Target your main page wrappers */
+
   body, .main-container, section {
     position: static !important;
     display: flex;
-    flex-direction: column; /* Stacks children neatly from top to bottom */
+    flex-direction: column;
     width: 100% !important;
-    height: auto !important; /* Lets the page grow vertically as you scroll */
-    padding: 20px;         /* Adds safe breathing room on the edges */
+    height: auto !important; 
+    padding: 20px;     
 	  
   }
 
-	  /* 2. Target the actual content elements inside your sections */
+
   h1, h2, h4, p, div.absolute, div,  img, button, .card-item, block, button2, button3, button4, block2 {
-    position: static !important; /* Returns them to normal page flow */
-    width: 50% !important;      /* Makes them span the width of the phone */
-    height: auto !important;     /* Prevents text clipping */
-    margin-bottom: 15px;         /* Creates uniform spacing between stacked elements */
+    position: static;
+    width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+     top: auto;
+    left: auto;
+	  
   }
+
+.element-that-should-be-first {
+  order: 1;
+}
+.element-that-should-be-second {
+  order: 2;
+}
+.element-that-should-be-third {
+  order: 3;
+}
+
 
 	
 }
@@ -159,7 +173,7 @@
 					}
 
 		
-
+            .random { }
 
 
 	
@@ -259,13 +273,13 @@
 	<body>			
 			
 			<div class="view">
-		<div><img src="output-onlinepngtools.png" alt="osu logo" height="60" width="60"; style="filter:drop-shadow(3px 3px 4px #11031a)"; class="block";></div>
-			<div><a href="https://osu.ppy.sh/users/37190633" class="button block">Open the osu site to my profile!</a></div>
-			<div><a href="whatwouldyoudo.html"><img src="★ (1).jpg" height="128" width="300"; style="position: absolute; top: 5px; right: 150px; filter: drop-shadow(10px 10px 4px #11031a); border-radius: 15px; border-width: 2px 2px 2px 2px"; class="button4"></a></div>
-			<div><a href="joker.html"><img src="1e4c0391b83f37f54156c7fff1cfbf5d.gif" height="128" width="128"; style="position: absolute; top: 5px; right: 10px; filter: drop-shadow(10px 10px 4px #11031a); border-radius: 15px; border-width: 2px 2px 2px 2px"; class="button4"></a></div>
+		<div><img src="output-onlinepngtools.png" alt="osu logo" height="60" width="60"; style="filter:drop-shadow(3px 3px 4px #11031a)"; class="element-that-should-be-first";></div>
+			<div><a href="https://osu.ppy.sh/users/37190633" class="button block element-that-should-be-first">Open the osu site to my profile!</a></div>
+			<div><a href="whatwouldyoudo.html"><img src="★ (1).jpg" height="128" width="300"; style="position: absolute; top: 5px; right: 150px; filter: drop-shadow(10px 10px 4px #11031a); border-radius: 15px; border-width: 2px 2px 2px 2px"; class="button4 element-that-should-be-first"></a></div>
+			<div><a href="joker.html"><img src="1e4c0391b83f37f54156c7fff1cfbf5d.gif" height="128" width="128"; style="position: absolute; top: 5px; right: 10px; filter: drop-shadow(10px 10px 4px #11031a); border-radius: 15px; border-width: 2px 2px 2px 2px"; class="button4 element-that-should-be-first"></a></div>
 			<div><img src="download (2).png"; style="filter:drop-shadow(3px 3px 4px #11031a); position: absolute; top: 10px; right: 460px; border: 2px solid white; border-radius: 15px; border-width: 05px 5px 5px 5px";></div>
-			<div><button class="button2"; style="filter:drop-shadow(10px 10px 4px #11031a)";><b>Irish 4k Mania Player!</b></button></div>
-			<div><button class="button3"; style="filter:drop-shadow(10px 10px 4px #11031a)";><b>I'm ASS LMFAOOOOO</b></button></div>
+			<div><button class="button2 element-that-should-be-second"; style="filter:drop-shadow(10px 10px 4px #11031a)";><b>Irish 4k Mania Player!</b></button></div>
+			<div><button class="button3 element-that-should-be-second"; style="filter:drop-shadow(10px 10px 4px #11031a)";><b>I'm ASS LMFAOOOOO</b></button></div>
 
 			<div><img src="p5cc_926371.png" width="300" height="200"; class="block"; style="position: absolute; top: 1000px; left: 750px; filter: drop-shadow(10px 10px 4px #11031a); border: 2px solid white; border-radius: 15px; border-width: 05px 05px 5px 5px"; ></div>
 
