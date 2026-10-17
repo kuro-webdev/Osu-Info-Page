@@ -12,11 +12,30 @@
 	<style> 
 
 
-		.center {
-  					display: flex;
-  					justify-content: center;
-  					align-items: center;
-				}
+		/* This only activates on mobile screens (768px wide or smaller) */
+@media (max-width: 768px) {
+  
+  /* 1. Target your main page wrappers */
+  body, .main-container, section {
+    position: static !important;
+    display: flex;
+    flex-direction: column; /* Stacks children neatly from top to bottom */
+    width: 100% !important;
+    height: auto !important; /* Lets the page grow vertically as you scroll */
+    padding: 20px;         /* Adds safe breathing room on the edges */
+  }
+
+}
+
+  /* 2. Target the actual content elements inside your sections */
+  h1, h2, h4, p, div.absolute, div,  img, button, .card-item, block, button2, button3, button4, block2 {
+    position: static !important; /* Returns them to normal page flow */
+    width: 100% !important;      /* Makes them span the width of the phone */
+    height: auto !important;     /* Prevents text clipping */
+    top: auto !important;        /* Clears out desktop pixel positioning */
+    left: auto !important;
+    margin-bottom: 15px;         /* Creates uniform spacing between stacked elements */
+  }
 					  
 			
 		.h4 { 
@@ -254,7 +273,7 @@
 				
 			<h4 class="h4 block"; style="position: absolute; top: 2160px; left: 255px;"><p>Alpha Dan Clears! 3/4:</p></h4>
 			<h4 class="h4 block"; style="position: absolute; top: 2160px; right: 255px;"><p>Other Achievements!:</p></h4>
-				<img src="MedalTVosu20260903194917942.png" alt="alpha dan jacks clear" width="1000" height="800"; class="block" style="position: absolute; top: 1300px; left: 300px; filter: drop-shadow(10px 10px 4px #11031a); border: 2px solid white; border-radius: 15px; border-width: 05px 05px 5px 5px";>
+				<img src="image_2026-10-17_183401381.png" alt="beta dan tech clear" width="1000" height="600"; class="block" style="position: absolute; top: 1300px; left: 300px; filter: drop-shadow(10px 10px 4px #11031a); border: 2px solid white; border-radius: 15px; border-width: 05px 05px 5px 5px";>
 				<img src="MedalTVosu20260903194917942.png" alt="alpha dan jacks clear" width="500" height="300"; class="block" style="position: absolute; top: 2300px; left: 150px; filter: drop-shadow(10px 10px 4px #11031a); border: 2px solid white; border-radius: 15px; border-width: 05px 05px 5px 5px";>
 				<img src="MedalTVosu20260905173714012.png" alt="alpha dan speed clear" width="500" height="300"; class="block" style="position: absolute; top: 2700px; left: 150px; filter: drop-shadow(10px 10px 4px #11031a); border: 2px solid white; border-radius: 15px; border-width: 05px 05px 5px 5px";>
 				<img src="MedalTVosu20260905174913679.png" alt ="alpha dan tech clear" width="500" height="300"; class="block" style="position: absolute; top: 3100px; left: 150px; filter: drop-shadow(10px 10px 4px #11031a); border: 2px solid white; border-radius: 15px; border-width: 05px 05px 5px 5px";>
